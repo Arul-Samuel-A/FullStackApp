@@ -19,7 +19,7 @@ async function adminLogin(req, res) {
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: "none",
       maxAge: 30 * 60 * 1000,
     });
     res.status(200).json({
