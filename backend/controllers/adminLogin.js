@@ -20,7 +20,7 @@ async function adminLogin(req, res) {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 20 * 60 * 1000,
+      maxAge: 30 * 60 * 1000,
     });
     res.status(200).json({
   message: "Login successful"
