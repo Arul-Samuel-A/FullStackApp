@@ -18,7 +18,7 @@ async function adminLogin(req, res) {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: true,
       sameSite: "strict",
       maxAge: 30 * 60 * 1000,
     });
