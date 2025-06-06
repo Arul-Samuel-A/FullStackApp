@@ -8,7 +8,7 @@ function Login() {
   const { setIsAdmin } = React.useContext(AuthContext);
   const [formData, setFormData] = React.useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const navigate = useNavigate();
@@ -16,40 +16,42 @@ function Login() {
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
   async function handleSubmit(e) {
-  e.preventDefault();
-  try {
-    const { data } = await axios.post("/books/login", formData); 
-    toast.success(data.message || "Login successful");
-    setIsAdmin(true); // Set admin status to true
-    
-    setTimeout(() => {
-      navigate("/books");
-    }, 2000);
-  } catch (err) {
-    console.error("Error logging in:", err);
-    if (err.response && err.response.data && err.response.data.message) {
-      toast.error(err.response.data.message);
-    } else {
-      toast.error("Login failed");
+    e.preventDefault();
+    try {
+      const { data } = await axios.post("/books/login", formData);
+      toast.success(data.message || "Login successful");
+      setIsAdmin(true); // Set admin status to true
+
+      setTimeout(() => {
+        navigate("/books");
+      }, 2000);
+    } catch (err) {
+      console.error("Error logging in:", err);
+      if (err.response && err.response.data && err.response.data.message) {
+        toast.error(err.response.data.message);
+      } else {
+        toast.error("Login failed");
+      }
     }
   }
-}
 
   const handleContinue = () => {
     setIsAdmin(false);
     toast.info("Continuing as user");
     navigate("/books");
   };
-  
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-screen bg-gray-100">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-lg md:w-96 w-9/10">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-8 rounded shadow-lg md:w-96 w-9/10"
+      >
         <h1 className="text-2xl font-bold text-center mb-6">Admin Login</h1>
         <input
           type="email"
@@ -72,7 +74,7 @@ function Login() {
         />
         <button
           type="submit"
-          className="bg-gray-800 text-white p-2 rounded w-full cursor-pointer
+          className="bg-pink-950 text-white p-2 rounded w-full cursor-pointer
           hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm"
         >
           Login

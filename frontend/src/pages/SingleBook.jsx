@@ -8,7 +8,7 @@ import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import { TrashIcon } from "@heroicons/react/24/outline";
 
 function SingleBook() {
-  const {isAdmin} = React.useContext(AuthContext);
+  const { isAdmin } = React.useContext(AuthContext);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -53,7 +53,6 @@ function SingleBook() {
   return (
     <div className="flex flex-col md:flex-row justify-center md:items-center bg-gray-100 p-4 md:min-h-screen md:mt-0 mt-12">
       <div className="items-center w-full max-w-4xl flex flex-col md:flex-row bg-white shadow-2xl rounded overflow-hidden">
-
         <div className="w-full md:w-1/2 aspect-square flex-shrink-0">
           <img
             src={book.image}
@@ -65,8 +64,12 @@ function SingleBook() {
         <div className="p-4 md:p-8 flex-1 w-full">
           <div className="flex justify-between items-center mb-4 w-full">
             <div>
-              <h1 className="font-mono text-xl md:text-2xl line-clamp-3">{book.name}</h1>
-              <h2 className="text-md md:text-lg text-gray-600">~ {book.author}</h2>
+              <h1 className="font-mono text-xl md:text-2xl line-clamp-3">
+                {book.name}
+              </h1>
+              <h2 className="text-md md:text-lg text-gray-600">
+                ~ {book.author}
+              </h2>
             </div>
             <span className="bg-gray-200 text-gray-800 text-sm px-3 py-1 rounded-full">
               {book.genre}
@@ -89,31 +92,38 @@ function SingleBook() {
             </div>
           </div>
 
-          {isAdmin && <div className="mt-6 flex w-full gap-3">
-  <button
-    onClick={editBook}
-    className="bg-gray-800 text-white p-2 rounded flex-1 cursor-pointer
+          {isAdmin && (
+            <div className="mt-6 flex w-full gap-3">
+              <button
+                onClick={editBook}
+                className="bg-pink-950 text-white p-2 rounded flex-1 cursor-pointer
     hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm flex items-center justify-center gap-1"
-  >
-    Edit Details<PencilSquareIcon className="h-5 w-5 text-white" />
-  </button>
-  <button
-    onClick={toggleDeleteModal}
-    className="bg-gray-800 text-white p-2 rounded flex-1 cursor-pointer
+              >
+                Edit Details
+                <PencilSquareIcon className="h-5 w-5 text-white" />
+              </button>
+              <button
+                onClick={toggleDeleteModal}
+                className="bg-pink-950 text-white p-2 rounded flex-1 cursor-pointer
     hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm flex items-center justify-center gap-1"
-  >
-    Delete<TrashIcon className="h-5 w-5 text-white" />
-  </button>
-</div>}
+              >
+                Delete
+                <TrashIcon className="h-5 w-5 text-white" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
       {showDeleteModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
           <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md border-4 border-rose-300">
-            <h2 className="text-lg font-semibold text-rose-700">Confirm Delete</h2>
+            <h2 className="text-lg font-semibold text-rose-700">
+              Confirm Delete
+            </h2>
             <p className="mt-2 text-gray-700">
-              Are you sure you want to delete <strong>{book.name}</strong>? This action cannot be undone.
+              Are you sure you want to delete <strong>{book.name}</strong>? This
+              action cannot be undone.
             </p>
 
             <div className="mt-4 flex justify-end gap-3">
@@ -126,7 +136,7 @@ function SingleBook() {
               </button>
               <button
                 onClick={handleDelete}
-                className="px-4 py-2 bg-gray-800 text-white rounded cursor-pointer
+                className="px-4 py-2 bg-pink-950 text-white rounded cursor-pointer
                 hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm"
               >
                 Yes, Delete

@@ -18,7 +18,7 @@ function Searchbar({ propUpping }) {
         value={searchTerm}
       />
       <button
-        className="shadow p-2 md:p-3 bg-gray-800 rounded-lg shadow cursor-pointer
+        className="shadow p-2 md:p-3 bg-pink-950 rounded-lg shadow cursor-pointer
         hover:bg-gray-600  active:scale-95 active:translate-y-0.5 active:shadow-sm"
         onClick={handleSearch}
       >
