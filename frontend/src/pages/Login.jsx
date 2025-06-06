@@ -75,7 +75,7 @@ function Login() {
         <button
           type="submit"
           className="bg-pink-950 text-white p-2 rounded w-full cursor-pointer
-          hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm"
+          hover:bg-gray-600 active:bg-gray-600 md:active:bg-pink-950"
         >
           Login
         </button>

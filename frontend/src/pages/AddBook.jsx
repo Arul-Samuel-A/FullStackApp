@@ -103,7 +103,7 @@ function AddBook() {
             <button
               type="submit"
               className="w-full bg-pink-950 text-white font-semibold py-3 rounded-lg cursor-pointer
-              hover:bg-gray-600 active:scale-98 active:translate-y-0.5 active:shadow-sm flex items-center justify-center gap-1"
+              hover:bg-gray-600 active:bg-gray-600 md:active:bg-pink-950 flex items-center justify-center gap-1"
             >
               Add Book <PlusIcon className="h-5 w-5 text-white" />
             </button>

@@ -27,7 +27,7 @@ function Header() {
         <button
           onClick={goToAddBook}
           className="flex items-center justify-center bg-pink-950 text-white rounded-md px-3 md:px-4 py-2 cursor-pointer gap-1
-             hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm"
+             hover:bg-gray-600 active:bg-gray-600 md:active:bg-pink-950"
         >
           <span className="font-mono text-sm md:text-base">Add Book</span>
           <PlusIcon className="h-5 w-5" />

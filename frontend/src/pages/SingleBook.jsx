@@ -98,7 +98,7 @@ function SingleBook() {
               <button
                 onClick={editBook}
                 className="bg-pink-950 text-white p-2 rounded flex-1 cursor-pointer
-    hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm flex items-center justify-center gap-1"
+    hover:bg-gray-600 active:bg-gray-600 md:active:bg-pink-950 flex items-center justify-center gap-1"
               >
                 Edit Details
                 <PencilSquareIcon className="h-5 w-5 text-white" />
@@ -106,7 +106,7 @@ function SingleBook() {
               <button
                 onClick={toggleDeleteModal}
                 className="bg-pink-950 text-white p-2 rounded flex-1 cursor-pointer
-    hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm flex items-center justify-center gap-1"
+    hover:bg-gray-600 active:bg-gray-600 md:active:bg-pink-950 flex items-center justify-center gap-1"
               >
                 Delete
                 <TrashIcon className="h-5 w-5 text-white" />
@@ -131,14 +131,14 @@ function SingleBook() {
               <button
                 onClick={toggleDeleteModal}
                 className="px-4 py-2 bg-gray-300 text-gray-800 rounded cursor-pointer 
-                hover:bg-gray-400 active:scale-95 active:translate-y-0.5 active:shadow-sm"
+                hover:bg-gray-600 active:bg-gray-600 md:active:bg-pink-950"
               >
                 Cancel
               </button>
               <button
                 onClick={handleDelete}
                 className="px-4 py-2 bg-pink-950 text-white rounded cursor-pointer
-                hover:bg-gray-600 active:scale-95 active:translate-y-0.5 active:shadow-sm"
+                hover:bg-gray-600 active:bg-gray-600 md:active:bg-pink-950"
               >
                 Yes, Delete
               </button>

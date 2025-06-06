@@ -19,7 +19,7 @@ function Searchbar({ propUpping }) {
       />
       <button
         className="shadow p-2 md:p-3 bg-pink-950 rounded-lg shadow cursor-pointer
-        hover:bg-gray-600  active:scale-95 active:translate-y-0.5 active:shadow-sm"
+        hover:bg-gray-600  active:bg-gray-600 md:active:bg-pink-950"
         onClick={handleSearch}
       >
         <MagnifyingGlassIcon className="h-5 w-5 text-white font-bold" />
