@@ -33,7 +33,7 @@ function AllBooks() {
   return (
     <>
       <Searchbar propUpping={handleSearch} />
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto px-4 pb-4 md:pb-8 mt-0 md:mt-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto px-4 pb-4 md:pb-8 mt-0 md:mt-4" style={{backgroundColor:"#f4f1f8"}}>
         {filteredBooks.length === 0 && 
           <div className="col-span-5 text-center text-gray-500">
             No books found matching your search criteria.

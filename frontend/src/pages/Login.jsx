@@ -47,7 +47,7 @@ function Login() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen bg-orange-100">
+    <div className="flex flex-col items-center justify-center w-full h-screen bg-orange-100" style={{backgroundColor:"#f4f1f8"}}>
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded shadow-lg md:w-96 w-9/10"

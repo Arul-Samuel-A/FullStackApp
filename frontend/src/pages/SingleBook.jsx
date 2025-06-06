@@ -51,7 +51,8 @@ function SingleBook() {
     : "N/A";
 
   return (
-    <div className="flex flex-col md:flex-row justify-center md:items-center bg-orange-100 p-4 md:min-h-screen md:mt-0 mt-12">
+    <div className="flex flex-col md:flex-row justify-center md:items-center bg-orange-100 p-4 md:min-h-screen md:mt-0 mt-12"
+    style={{backgroundColor:"#f4f1f8"}}>
       <div className="items-center w-full max-w-4xl flex flex-col md:flex-row bg-white shadow-2xl rounded overflow-hidden">
         <div className="w-full md:w-1/2 aspect-square flex-shrink-0">
           <img

@@ -9,7 +9,7 @@ function Searchbar({ propUpping }) {
   };
 
   return (
-    <div className="sticky top-0 z-10 bg-orange-100 w-full flex justify-center items-center p-4 gap-3 md:mt-18 mt-14">
+    <div className="sticky top-0 z-10 bg-orange-100 w-full flex justify-center items-center p-4 gap-3 md:mt-18 mt-14" style={{backgroundColor:"#f4f1f8"}}>
       <input
         className="md:w-1/2 w-full bg-white px-4 py-2 md:px-6 md:py-3 rounded-lg shadow"
         type="text"

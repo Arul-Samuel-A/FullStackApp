@@ -15,7 +15,8 @@ function AppContent() {
   const isLoginPage = location.pathname !== "/";
 
   return (
-    <div className="bg-orange-100 min-h-screen flex flex-col">
+    <div className="bg-orange-100 min-h-screen flex flex-col"
+    style={{backgroundColor:"#f4f1f8"}}>
       {isLoginPage && <Header />}
       <Routes>
         <Route path="/" element={<Login />} />
