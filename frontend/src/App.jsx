@@ -5,7 +5,7 @@ import SingleBook from "./pages/SingleBook.jsx";
 import AddBook from "./pages/AddBook.jsx";
 import EditBook from "./pages/EditBook.jsx";
 import Login from "./pages/Login.jsx";
-import { createContext,useState } from "react";
+import { createContext, useState } from "react";
 import { ToastContainer } from "react-toastify";
 
 export const AuthContext = createContext();
@@ -15,7 +15,7 @@ function AppContent() {
   const isLoginPage = location.pathname !== "/";
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <div className="bg-orange-100 min-h-screen flex flex-col">
       {isLoginPage && <Header />}
       <Routes>
         <Route path="/" element={<Login />} />
@@ -32,7 +32,7 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   return (
     <BrowserRouter>
-      <AuthContext.Provider value={{isAdmin, setIsAdmin}}>
+      <AuthContext.Provider value={{ isAdmin, setIsAdmin }}>
         <AppContent />
         <ToastContainer></ToastContainer>
       </AuthContext.Provider>

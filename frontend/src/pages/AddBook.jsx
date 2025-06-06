@@ -37,7 +37,7 @@ function AddBook() {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4 md:mt-6 mt-45">
+    <div className="bg-orange-100 min-h-screen flex items-center justify-center p-4 md:mt-6 mt-45">
       <div className="bg-white shadow-xl rounded w-full max-w-4xl p-8">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-8">
           Add a New Book
