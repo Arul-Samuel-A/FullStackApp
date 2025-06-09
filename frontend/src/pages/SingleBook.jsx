@@ -118,7 +118,7 @@ function SingleBook() {
 
       {showDeleteModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-md border-4 border-rose-300">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-5/6 max-w-md border-4 border-rose-300">
             <h2 className="text-lg font-semibold text-rose-700">
               Confirm Delete
             </h2>
