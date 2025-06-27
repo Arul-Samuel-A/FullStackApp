@@ -6,15 +6,17 @@ import Searchbar from "../components/Searchbar.jsx";
 function AllBooks() {
   const [books, setBooks] = React.useState([]);
   const [filteredBooks, setFilteredBooks] = React.useState([]);
-
+  const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {
     const fetchbooks = async () => {
       try {
         const { data } = await axios.get("/books");
         setBooks(data);
-        setFilteredBooks(data); 
+        setFilteredBooks(data);
+        setLoading(false);
       } catch (err) {
         console.log(err.message);
+        setLoading(false);
       }
     };
     fetchbooks();
@@ -33,6 +35,11 @@ function AllBooks() {
   return (
     <>
       <Searchbar propUpping={handleSearch} />
+      {loading ? (
+        <div className="flex items-center justify-center h-full">
+          Fetching books... Please wait.
+        </div>
+      ):(
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto px-4 pb-4 md:pb-8 mt-0 md:mt-4" style={{backgroundColor:"#f4f1f8"}}>
         {filteredBooks.length === 0 && 
           <div className="col-span-5 text-center text-gray-500">
@@ -66,6 +73,7 @@ function AllBooks() {
           </Link>
         ))}
       </div>
+      )}
     </>
   );
 }
